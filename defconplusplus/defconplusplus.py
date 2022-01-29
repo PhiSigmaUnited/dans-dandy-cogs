@@ -4,7 +4,7 @@ import discord
 from redbot.core import Config, checks, commands
 
 
-class Defcon(commands.Cog):
+class DefconPlusPlus(commands.Cog):
 
     """Server DEFCON Levels"""
 
