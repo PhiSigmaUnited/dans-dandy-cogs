@@ -50,7 +50,7 @@ class DefconPlusPlus(commands.Cog):
         guild = ctx.message.guild
         # channel = ctx.message.channel
         level = await self.conf.guild(guild).defcon()
-        await ctx.send("Phi Discord Sigma's current Academic DEFCON level is:\nDEFCON {}.".format(level))
+        await ctx.send("Phi Discord Sigma's current Academic DEFCON level is:\n\n**DEFCON {}**.".format(level))
 
     @commands.guild_only()
     @commands.command(name="defcon+")
