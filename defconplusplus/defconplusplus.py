@@ -160,7 +160,7 @@ class DefconPlusPlus(commands.Cog):
                             "! Avoid sleep deprivation or"
                             " excessive recreational activities.\n"
                             "! Maintain self-esteem & your willpower" 
-                            "for maximum academic success.")
+                            " for maximum academic success.")
         elif level == 2:
             color = 0xff0000
             thumbnail_url = 'https://i.imgur.com/cSzezRE.gif'
@@ -169,7 +169,7 @@ class DefconPlusPlus(commands.Cog):
             instructions = ("!! Immediately start pre-planning"
                             " for upcoming projects & exams.\n"
                             "!! Ready your stress-relief methods"
-                            " for self-esteem recovery & motivational energy crash.\n"
+                            " for self-esteem recovery & motivational energy crashes.\n"
                             "!! Maximize study-collaborations"
                             " with your fellow classmates ASAP as appropriate.")
         elif level == 1:
