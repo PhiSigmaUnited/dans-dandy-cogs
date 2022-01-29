@@ -36,12 +36,21 @@ class DefconPlusPlus(commands.Cog):
         return
 
     @commands.guild_only()
-    @commands.command(name="defcon")
+    @commands.command(name="postdefconstatus")
     async def defcon(self, ctx):
         """Reports Phi Discord Sigma's current Academic DEFCON level."""
         guild = ctx.message.guild
         channel = ctx.message.channel
         await self._post_defcon(ctx, guild, channel)
+
+    @commands.guild_only()
+    @commands.command(name="checkdefcon")
+    async def defcon(self, ctx):
+        """Checks Phi Discord Sigma's current Academic DEFCON level."""
+        guild = ctx.message.guild
+        # channel = ctx.message.channel
+        level = await self.conf.guild(guild).defcon()
+        await ctx.send("Phi Discord Sigma's current Academic DEFCON level is:\nDEFCON {}.".format(level))
 
     @commands.guild_only()
     @commands.command(name="defcon+")
