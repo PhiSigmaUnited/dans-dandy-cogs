@@ -10,8 +10,9 @@ class DefconPlusPlus(commands.Cog):
 
     default_global_settings = {
         # Yes this is weird, but lower defcon == higher threat
-        "max_defcon": 1,
-        "min_defcon": 5
+        # NO ITS NOT THIS IS AMERICA USA USA USA USA USA USA USA USA USA USA USA USA USA USA USA USA USA USA USA USA USA 
+        "max_defcon": 5,
+        "min_defcon": 1
     }
 
     default_guild_settings = {
@@ -54,7 +55,7 @@ class DefconPlusPlus(commands.Cog):
             await ctx.send("chilllll we are at DEFCON 5 bro lolol")
             return
         else:
-            await self.conf.guild(guild).defcon.set(level - 1)
+            await self.conf.guild(guild).defcon.set(level + 1)
         await self.conf.guild(guild).authority.set(member.display_name)
         await self._post_defcon(ctx, guild, channel)
 
@@ -70,7 +71,7 @@ class DefconPlusPlus(commands.Cog):
             await ctx.send("We are already at minimum DEFCON lmao")
             return
         else:
-            await self.conf.guild(guild).defcon.set(level + 1)
+            await self.conf.guild(guild).defcon.set(level - 1)
         await self.conf.guild(guild).authority.set(member.display_name)
         await self._post_defcon(ctx, guild, channel)
 
