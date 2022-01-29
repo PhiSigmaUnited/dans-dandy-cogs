@@ -22,7 +22,7 @@ class Defcon(commands.Cog):
 
     def __init__(self, bot):
         self.bot = bot
-        self.conf = Config.get_conf(self, identifier=440374611)
+        self.conf = Config.get_conf(self, identifier=6942000)
         self.conf.register_global(
             **self.default_global_settings
         )
@@ -37,7 +37,7 @@ class Defcon(commands.Cog):
     @commands.guild_only()
     @commands.command(name="defcon")
     async def defcon(self, ctx):
-        """Reports the server DEFCON level."""
+        """Reports Phi Discord Sigma's current Academic DEFCON level."""
         guild = ctx.message.guild
         channel = ctx.message.channel
         await self._post_defcon(ctx, guild, channel)
@@ -45,13 +45,13 @@ class Defcon(commands.Cog):
     @commands.guild_only()
     @commands.command(name="defcon+")
     async def defconplus(self, ctx):
-        """Elevates the server DEFCON level."""
+        """Elevates Phi Discord Sigma's Academic DEFCON level."""
         guild = ctx.message.guild
         channel = ctx.message.channel
         member = ctx.message.author
         level = await self.conf.guild(guild).defcon()
         if level == await self.conf.max_defcon():
-            await ctx.send("We are already maximum DEFCON! Oh no!")
+            await ctx.send("chilllll we are at DEFCON 5 bro lolol")
             return
         else:
             await self.conf.guild(guild).defcon.set(level - 1)
@@ -61,13 +61,13 @@ class Defcon(commands.Cog):
     @commands.guild_only()
     @commands.command(name="defcon-")
     async def defconminus(self, ctx):
-        """Lowers the server DEFCON level."""
+        """Lowers Phi Discord Sigma's Academic DEFCON level."""
         guild = ctx.message.guild
         channel = ctx.message.channel
         member = ctx.message.author
         level = await self.conf.guild(guild).defcon()
         if level == await self.conf.min_defcon():
-            await ctx.send("We are already at minimum DEFCON! Relax!")
+            await ctx.send("We are already at minimum DEFCON lmao")
             return
         else:
             await self.conf.guild(guild).defcon.set(level + 1)
@@ -77,7 +77,7 @@ class Defcon(commands.Cog):
     @commands.guild_only()
     @commands.command(name="setdefcon")
     async def setdefcon(self, ctx, level: int):
-        """Manually set the server DEFCON level in case of emergency."""
+        """Manually set Phi Discord Sigma's Academic DEFCON level in case of emergency."""
         guild = ctx.message.guild
         channel = ctx.message.channel
         member = ctx.message.author
@@ -86,21 +86,20 @@ class Defcon(commands.Cog):
             await self.conf.guild(guild).authority.set(member.display_name)
             await self._post_defcon(ctx, guild, channel)
         else:
-            await ctx.send("Not a valid DEFCON level. Haven't "
-                           "you seen War Games?")
+            await ctx.send("Not a valid DEFCON level bruh")
 
     @commands.guild_only()
     @commands.command(name="defconchan")
     @checks.mod()
     async def defconchan(self, ctx, channel: discord.TextChannel=None):
-        """Constrain defcon alerts to a specific channel.
+        """Constrain Phi Discord Sigma's Academic DEFCON alerts to a specific channel.
         Omit the channel argument to clear the setting."""
         me = ctx.me
         author = ctx.author
         guild = ctx.guild
         if channel is None:
             await self.conf.guild(guild).channel.set(None)
-            await ctx.send("DEFCON channel setting cleared.")
+            await ctx.send("Phi Discord Sigma's Academic channel setting cleared.")
             return
 
         if not channel.permissions_for(author).send_messages:
@@ -111,7 +110,7 @@ class Defcon(commands.Cog):
             return
 
         await self.conf.guild(guild).channel.set(channel.id)
-        await ctx.send("Defcon channel set to **{}**.".format(channel.name))
+        await ctx.send("Phi Discord Sigma's Academic DEFCON channel set to **{}**.".format(channel.name))
 
     async def _post_defcon(self, ctx, guild, channel):
 
@@ -123,46 +122,52 @@ class Defcon(commands.Cog):
         if level == 5:
             color = 0x0080ff
             thumbnail_url = 'https://i.imgur.com/ynitQlf.gif'
-            author = "This server is at DEFCON LEVEL {}.".format(level)
-            subtitle = ("No known threats to your self esteem "
+            author = "Phi Discord Sigma is at DEFCON LEVEL {}.".format(level)
+            subtitle = ("No known threats to your GPA or PSU grades "
                         "exist at this time.")
-            instructions = ("- Partipaction in online games is encouraged\n"
-                            "- Remain vigilant of insider threats\n"
-                            "- Report all suspicious activity")
+            instructions = ("- Relaxing & Enjoying the peace before the exams is encouraged.\n"
+                            "- Remain vigilant of sneaky Canvas guerrilla assignment-warfare.\n"
+                            "- Report all sussy behavior.")
         elif level == 4:
             color = 0x00ff00
             thumbnail_url = 'https://i.imgur.com/sRhQekI.gif'
-            author = "This server is at DEFCON LEVEL {}.".format(level)
-            subtitle = 'Trace amounts of sodium have been detected.'
-            instructions = ("- Inhale deeply through your nose and "
-                            "count to 5\n"
-                            "- Take short breaks between games\n"
-                            "- Do not encourage trolls")
+            author = "Phi Discord Sigma is at DEFCON LEVEL {}.".format(level)
+            subtitle = 'Academic threats have been detected to be near or soon.'
+            instructions = ("! Follow Your 'G.N.C.':\n"
+                            "-> G - Your PSU Google Calendar.\n"
+                            "-> N - Your Notifications.\n"
+                            "-> C - Your Canvas Calendar.")
         elif level == 3:
             color = 0xffff00
             thumbnail_url = 'https://i.imgur.com/xY9SkkA.gif'
-            author = "This server is at DEFCON LEVEL {}.".format(level)
-            subtitle = 'Sodium levels may exceed OSHA exposure limits.'
-            instructions = ("- Use extreme caution when playing ranked games\n"
-                            "- Log off non-essential communication channels\n"
-                            "- Put on your big boy pants")
+            author = "Phi Discord Sigma is at DEFCON LEVEL {}.".format(level)
+            subtitle = 'Academic threats have been detected to be imminent.'
+            instructions = ("! Use extreme caution if procrastinating at this time.\n"
+                            "! Check your PSU Email,"
+                            " Canvas & Google Calendars regularly.\n"
+                            "! Avoid sleep deprivation or"
+                            " excessive recreational activities.\n"
+                            "! Maintain self-esteem & your willpower" 
+                            "for maximum academic success.")
         elif level == 2:
             color = 0xff0000
             thumbnail_url = 'https://i.imgur.com/cSzezRE.gif'
-            author = "This server is at DEFCON LEVEL {}.".format(level)
-            subtitle = 'Sodium levels are approaching critical mass'
-            instructions = ("- Avoid ranked game modes at all costs\n"
-                            "- Mute all hostile voice channels\n"
-                            "- Queue up some relaxing jazz music")
+            author = "Phi Discord Sigma is at DEFCON LEVEL {}.".format(level)
+            subtitle = 'Prepare for War. Brace For Academic Self-Esteem Impact.'
+            instructions = ("!! Immediately start pre-planning"
+                            " for upcoming projects & exams.\n"
+                            "!! Ready your stress-relief methods"
+                            " for self-esteem recovery & motivational energy crash.\n"
+                            "!! Maximize study-collaborations"
+                            " with your fellow classmates ASAP as appropriate.")
         elif level == 1:
             color = 0xffffff
             thumbnail_url = 'https://i.imgur.com/NVB1AFA.gif'
-            author = "This server is at DEFCON LEVEL {}.".format(level)
-            subtitle = 'Total destruction is IMMINENT.'
-            instructions = ("- Do not participate in any online games\n"
-                            "- Log off all social media immediately\n"
-                            "- Take shelter outdoors until the "
-                            "all-clear is given")
+            author = "Phi Discord Sigma is at DEFCON LEVEL {}.".format(level)
+            subtitle = 'Finals Week. Let\'s get this fucking bread.'
+            instructions = ("!!! Good luck, fellow students.\n"
+                            "!!! Remember: If you give it your all...\n"
+                            "...that's all that matters.")
         else:
             # Better error handling?
             return
