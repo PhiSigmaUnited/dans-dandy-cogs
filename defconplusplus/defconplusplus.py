@@ -184,5 +184,7 @@ class DefconPlusPlus(commands.Cog):
             await channel.send(embed=embed)
         else:
             if channel != set_channel:
-                await ctx.send("<:cat_foh_da_clout:936976381181579295> its done chief. <:salute:936975896588460042>")
+                catvibe = "<:cat_foh_da_clout:936976381181579295>"
+                salute = "<:salute:936976381205865984>"
+                await ctx.send(f"{catvibe} its done chief. {salute}")
             await set_channel.send(embed=embed)
