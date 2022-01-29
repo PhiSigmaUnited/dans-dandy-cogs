@@ -184,5 +184,5 @@ class DefconPlusPlus(commands.Cog):
             await channel.send(embed=embed)
         else:
             if channel != set_channel:
-                await ctx.send("its done chief. :salute:")
+                await ctx.send("<:cat_foh_da_clout:936976381181579295> its done chief. <:salute:936975896588460042>")
             await set_channel.send(embed=embed)
