@@ -91,7 +91,7 @@ class DefconPlusPlus(commands.Cog):
         guild = ctx.message.guild
         channel = ctx.message.channel
         member = ctx.message.author
-        if await self.conf.max_defcon() <= level <= await self.conf.min_defcon():
+        if await self.conf.min_defcon() <= level <= await self.conf.max_defcon():
             await self.conf.guild(guild).defcon.set(level)
             await self.conf.guild(guild).authority.set(member.display_name)
             await self._post_defcon(ctx, guild, channel)
