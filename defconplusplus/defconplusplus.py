@@ -57,7 +57,7 @@ class DefconPlusPlus(commands.Cog):
     @commands.guild_only()
     @commands.command(name="defcon+")
     async def defconplus(self, ctx):
-        """Elevates & Announce Phi Discord Sigma's Academic DEFCON level."""
+        """Elevate & Announce Phi Discord Sigma's Academic DEFCON level."""
         guild = ctx.message.guild
         channel = ctx.message.channel
         member = ctx.message.author
@@ -73,7 +73,7 @@ class DefconPlusPlus(commands.Cog):
     @commands.guild_only()
     @commands.command(name="defcon-")
     async def defconminus(self, ctx):
-        """Lowers & Announce Phi Discord Sigma's Academic DEFCON level."""
+        """Lower & Announce Phi Discord Sigma's Academic DEFCON level."""
         guild = ctx.message.guild
         channel = ctx.message.channel
         member = ctx.message.author
@@ -89,7 +89,7 @@ class DefconPlusPlus(commands.Cog):
     @commands.guild_only()
     @commands.command(name="setdefcon")
     async def setdefcon(self, ctx, level: int):
-        """Manually Set & Announce Phi Discord Sigma's Academic DEFCON level in case of emergency."""
+        """Manually Set & Announce Phi Discord Sigma's Academic DEFCON level - in case of emergencies."""
         guild = ctx.message.guild
         channel = ctx.message.channel
         member = ctx.message.author
@@ -104,7 +104,7 @@ class DefconPlusPlus(commands.Cog):
     @commands.command(name="defconchan")
     @checks.mod()
     async def defconchan(self, ctx, channel: discord.TextChannel=None):
-        """Constrain Phi Discord Sigma's Academic DEFCON alerts to a specific channel.
+        """Set the Channel for the Academic DEFCON alerts to a specific channel.
         Omit the channel argument to clear the setting."""
         me = ctx.me
         author = ctx.author
