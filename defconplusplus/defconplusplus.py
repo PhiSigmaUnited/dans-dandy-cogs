@@ -38,17 +38,17 @@ class DefconPlusPlus(commands.Cog):
     @commands.guild_only()
     @commands.command(name="defcon")
     async def checkdefcon(self, ctx):
-        """Checks Phi Discord Sigma's current Academic DEFCON level."""
+        """Check on Phi Discord Sigma's current Academic DEFCON level."""
         guild = ctx.message.guild
         # channel = ctx.message.channel
         level = await self.conf.guild(guild).defcon()
-        await ctx.send("Phi Discord Sigma's current Academic DEFCON level is:\n\n**DEFCON {}**.".format(level))
+        await ctx.send("Phi Discord Sigma's current Academic DEFCON level is:\n\n**DEFCON __{}__**.".format(level))
 
 
     @commands.guild_only()
     @commands.command(name="postdefconstatus")
     async def postdefcon(self, ctx):
-        """Reports Phi Discord Sigma's current Academic DEFCON level."""
+        """Announce Phi Discord Sigma's current Academic DEFCON level."""
         guild = ctx.message.guild
         channel = ctx.message.channel
         await self._post_defcon(ctx, guild, channel)
@@ -57,7 +57,7 @@ class DefconPlusPlus(commands.Cog):
     @commands.guild_only()
     @commands.command(name="defcon+")
     async def defconplus(self, ctx):
-        """Elevates Phi Discord Sigma's Academic DEFCON level."""
+        """Elevates & Announce Phi Discord Sigma's Academic DEFCON level."""
         guild = ctx.message.guild
         channel = ctx.message.channel
         member = ctx.message.author
@@ -73,7 +73,7 @@ class DefconPlusPlus(commands.Cog):
     @commands.guild_only()
     @commands.command(name="defcon-")
     async def defconminus(self, ctx):
-        """Lowers Phi Discord Sigma's Academic DEFCON level."""
+        """Lowers & Announce Phi Discord Sigma's Academic DEFCON level."""
         guild = ctx.message.guild
         channel = ctx.message.channel
         member = ctx.message.author
@@ -89,7 +89,7 @@ class DefconPlusPlus(commands.Cog):
     @commands.guild_only()
     @commands.command(name="setdefcon")
     async def setdefcon(self, ctx, level: int):
-        """Manually set Phi Discord Sigma's Academic DEFCON level in case of emergency."""
+        """Manually Set & Announce Phi Discord Sigma's Academic DEFCON level in case of emergency."""
         guild = ctx.message.guild
         channel = ctx.message.channel
         member = ctx.message.author
