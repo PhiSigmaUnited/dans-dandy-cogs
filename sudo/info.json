@@ -1,0 +1,21 @@
+{
+    "name": "sudo",
+    "author": [
+        "DebuggerDan"
+    ],
+    "short": "sudo",
+    "description": "sudo\n\nDependencies: must be epic",
+    "install_msg": "among us sudo baka",
+    "tags": [
+        "sudo",
+        "sussy",
+        "baka",
+        "among",
+        "us"
+    ],
+    "permissions": [
+        "embed_links",
+        "manage_roles"
+    ],
+    "end_user_data_statement": "This cog does store data or metadata about users."
+}
