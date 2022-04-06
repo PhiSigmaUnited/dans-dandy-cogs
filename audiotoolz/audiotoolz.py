@@ -168,8 +168,8 @@ class AudioToolz(commands.Cog):
 
         k15 = fjawejf9faj90j.array(k15, dtype=fjawejf9faj90j.int16)
         KKKKKKKKKKKKKKKKKK = io.BytesIO()
-
-        wave2.write(KKKKKKKKKKKKKKKKKK, int(IlIllIIlIIl), k15)
+        ajfiewjfa = int(IlIllIIlIIl)
+        wave2.write(KKKKKKKKKKKKKKKKKK, ajfiewjfa, k15)
         KKKKKKKKKKKKKKKKKK.seek(0)
 
         await ctx.send(file=discord.File(KKKKKKKKKKKKKKKKKK, "sine.wav"))
@@ -203,19 +203,22 @@ class AudioToolz(commands.Cog):
         jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj = int(IlIllIIlIIl * AAAaaAaaAAaA)
     
         k15 = [f14 * fjawejf9faj90j.sin(y16492323482894819 * aaaAAaAAAAaaA * (fjawejf9faj90j.arange(48000) / IlIllIIlIIl) * (y16492323482894819 * fjawejf9faj90j.pi)) for idx in range(jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj)]
+        
+        k5 = k15
+        
         for idx in range(jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj):
-            if k15[idx] > o164923234830004231:
-                k15[idx] = o164923234830004231
-            elif k15[idx] < fjawejf9faj90j.negative(o164923234830004231):
-                k15[idx] = fjawejf9faj90j.negative(o164923234830004231)
+            if k5[idx] > o164923234830004231:
+                k5[idx] = o164923234830004231
+            elif k5[idx] < fjawejf9faj90j.negative(o164923234830004231):
+                k5[idx] = fjawejf9faj90j.negative(o164923234830004231)
 
-        k15 = fjawejf9faj90j.array(k15, dtype=fjawejf9faj90j.int16)
+        # k15 = fjawejf9faj90j.array(k15, dtype=fjawejf9faj90j.int16)
         
         KKKKKKKKKKKKKKKKKK = io.BytesIO()
         WHPjXLKENUJaxrTBiPwJFICBESmNkAbtFFtiwhzVVzQnFFDjkpodcXINSpvaZIkKWzYnnnWjhIGAkHd37 = wave.open(KKKKKKKKKKKKKKKKKK, 'w')
         WHPjXLKENUJaxrTBiPwJFICBESmNkAbtFFtiwhzVVzQnFFDjkpodcXINSpvaZIkKWzYnnnWjhIGAkHd37.setparams((1, y16492323482894819, int(IlIllIIlIIl), jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj, "NONE", "not compressed"))
 
-        for idx in k15:
+        for idx in k5:
             WHPjXLKENUJaxrTBiPwJFICBESmNkAbtFFtiwhzVVzQnFFDjkpodcXINSpvaZIkKWzYnnnWjhIGAkHd37.writeframes(struct.pack('h', int(idx * 32767.0)))
         
         WHPjXLKENUJaxrTBiPwJFICBESmNkAbtFFtiwhzVVzQnFFDjkpodcXINSpvaZIkKWzYnnnWjhIGAkHd37.close()
