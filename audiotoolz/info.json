@@ -1,0 +1,11 @@
+{
+    "name" : "AudioToolz",
+    "author" : ["DebuggerDan & bobloy"],
+    "short" : "Dan's audio toolz",
+    "description" : "Toolz for audioooo\n\nDependencies: wave, scipy, numpy\n\nSpecial Thanks to bobloy's Fox-V3's tts cog for uploading music files & code!",
+    "install_msg" : "Thanks for installing audiotoolz. swaggg",
+    "requirements": ["wave", "scipy", "numpy", "struct"],
+    "tags": ["audio", "audiotoolz", "sussy", "among us"],
+    "permissions" : ["embed_links", "upload_files"],
+    "end_user_data_statement": "This cog does not persistently store data or metadata about users."
+}
