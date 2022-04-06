@@ -129,12 +129,12 @@ class AudioToolz(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
         self.conf = Config.get_conf(self, identifier=6942003)
-        self.conf.register_global(
-            **self.default_global_settings
-        )
-        self.conf.register_guild(
-            **self.default_guild_settings
-        )
+        # self.conf.register_global(
+        #     **self.default_global_settings
+        # )
+        # self.conf.register_guild(
+        #     **self.default_guild_settings
+        # )
 
     async def red_delete_data_for_user(self, **kwargs):
         """Nothing to delete."""
