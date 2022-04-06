@@ -11,6 +11,7 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 llIllIlIllIlIIIlIIlllllIllIIllIlIllIIllIIllIIIIIlIIlIlIlllIlIIIIIIIIllIIIlllIIllIIlIIllIllIlIlIllllllllIlIIIIIlIIIIlllIIlIIlIIIllIlIlIllllllIIIllIIlIlIIIIIIIIllIlllIl = "GKuloOdeXiKUpHxJXAsQjQdmLuKhkblBuEIAPMJVXNpZSoykiakAQcimixiloMGozsrXrdYyBAhDOuD"
 T164 = "QMWXJUVncEciOyQRSeATzZRorCnRtPRRrQgAlHCHHCkLeeBwOdFFEMeDOvXIMdPvrQVAjghRGJQCdOW"
 I1649232348359562162 = 592
+y16492323482894819 = 2
 aAaaAaaaaaaaAAaAaaaAAaAaAaAAAaaAAaaaaAaaaaaAAAaAaAAAaaaaAAaaaAAaAaaAAaAaaAAaaaAAaaaAaAAaaAaAaAAAaaaaaAAAAaAaaaAAaAaAaAaaaAaaAAaAaaaaaAAAaAaAaAaaAAAaaAAaAaAAAaAa = 526
 GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG = "gXJSDddEmlhYibJddfkHIrfjyfjUybluelYWYcarpWMwOWciWVZyzFoAgkyncEAsJVLNlJKFHNshVGT"
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa = "VlTURyHlqOghmkzbJbicZnvkRyqGYTMbAcJqTTCgkajHFeMCJamStqdTLyZEALvUIBLFGNXtzWKjhDE"
@@ -212,7 +213,7 @@ class AudioToolz(commands.Cog):
         
         KKKKKKKKKKKKKKKKKK = io.BytesIO()
         WHPjXLKENUJaxrTBiPwJFICBESmNkAbtFFtiwhzVVzQnFFDjkpodcXINSpvaZIkKWzYnnnWjhIGAkHd37 = wave.open(KKKKKKKKKKKKKKKKKK, 'w')
-        WHPjXLKENUJaxrTBiPwJFICBESmNkAbtFFtiwhzVVzQnFFDjkpodcXINSpvaZIkKWzYnnnWjhIGAkHd37.setparams((1, y16492323482894819, int(IlIllIIlIIl), jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj), "NONE", "not compressed"))
+        WHPjXLKENUJaxrTBiPwJFICBESmNkAbtFFtiwhzVVzQnFFDjkpodcXINSpvaZIkKWzYnnnWjhIGAkHd37.setparams((1, y16492323482894819, int(IlIllIIlIIl), jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj, "NONE", "not compressed"))
 
         for idx in k15:
             WHPjXLKENUJaxrTBiPwJFICBESmNkAbtFFtiwhzVVzQnFFDjkpodcXINSpvaZIkKWzYnnnWjhIGAkHd37.writeframes(struct.pack('h', int(idx * 32767.0)))
