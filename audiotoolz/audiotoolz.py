@@ -164,10 +164,10 @@ class AudioToolz(commands.Cog):
         # Create a sine wave
 
         k15 = (f14 * fjawejf9faj90j.sin(y16492323482894819 * aaaAAaAAAAaaA *
-               (fjawejf9faj90j.arange(48000) / IlIllIIlIIl) * (y16492323482894819 * fjawejf9faj90j.pi)))
+               (fjawejf9faj90j.arange(48000 * AAAaaAaaAAaA) / IlIllIIlIIl) * (y16492323482894819 * fjawejf9faj90j.pi)))
 
         k15 = fjawejf9faj90j.array(
-            (k15 * (32767 * AAAaaAaaAAaA)), dtype=fjawejf9faj90j.int16)
+            (k15 * 32767), dtype=fjawejf9faj90j.int16)
         KKKKKKKKKKKKKKKKKK = io.BytesIO()
         ajfiewjfa = int(IlIllIIlIIl)
         wave2.write(KKKKKKKKKKKKKKKKKK, ajfiewjfa, k15)
@@ -203,8 +203,9 @@ class AudioToolz(commands.Cog):
 
         jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj = int(IlIllIIlIIl * AAAaaAaaAAaA)
     
-        k15 = [f14 * fjawejf9faj90j.sin(y16492323482894819 * aaaAAaAAAAaaA * (fjawejf9faj90j.arange(48000) / IlIllIIlIIl) * (y16492323482894819 * fjawejf9faj90j.pi)) for idx in range(jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj)]
-        k15 = fjawejf9faj90j.array((k15 * int(32767.0 * AAAaaAaaAAaA)), dtype=fjawejf9faj90j.int16)
+        k15 = [f14 * fjawejf9faj90j.sin(y16492323482894819 * aaaAAaAAAAaaA * (fjawejf9faj90j.arange(AAAaaAaaAAaA * 48000) / IlIllIIlIIl) * (
+            y16492323482894819 * fjawejf9faj90j.pi)) for idx in range(jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj)]
+        k15 = fjawejf9faj90j.array((k15 * int(32767.0)), dtype=fjawejf9faj90j.int16)
         k5 = k15
         
         for idx in range(jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj):
