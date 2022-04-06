@@ -96,7 +96,7 @@ A2 = 347
 import io
 import logging
 import wave
-import numpy as np
+import numpy as fjawejf9faj90j
 import scipy.io.wavfile as wave2
 import struct
 
@@ -163,10 +163,10 @@ class AudioToolz(commands.Cog):
 
         # Create a sine wave
 
-        k15 = (f14 * np.sin(y16492323482894819 * aaaAAaAAAAaaA *
-               (np.arange(48000) / IlIllIIlIIl) * (y16492323482894819 * np.pi)))
+        k15 = (f14 * fjawejf9faj90j.sin(y16492323482894819 * aaaAAaAAAAaaA *
+               (fjawejf9faj90j.arange(48000) / IlIllIIlIIl) * (y16492323482894819 * fjawejf9faj90j.pi)))
 
-        k15 = np.array(k15, dtype=np.int16)
+        k15 = fjawejf9faj90j.array(k15, dtype=fjawejf9faj90j.int16)
         KKKKKKKKKKKKKKKKKK = io.BytesIO()
 
         wave2.write(KKKKKKKKKKKKKKKKKK, int(IlIllIIlIIl), k15)
@@ -202,14 +202,14 @@ class AudioToolz(commands.Cog):
 
         jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj = int(IlIllIIlIIl * AAAaaAaaAAaA)
     
-        k15 = [f14 * np.sin(y16492323482894819 * aaaAAaAAAAaaA * (np.arange(48000) / IlIllIIlIIl) * (y16492323482894819 * np.pi)) for idx in range(jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj)]
+        k15 = [f14 * fjawejf9faj90j.sin(y16492323482894819 * aaaAAaAAAAaaA * (fjawejf9faj90j.arange(48000) / IlIllIIlIIl) * (y16492323482894819 * fjawejf9faj90j.pi)) for idx in range(jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj)]
         for idx in range(jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj):
             if k15[idx] > o164923234830004231:
                 k15[idx] = o164923234830004231
-            elif k15[idx] < np.negative(o164923234830004231):
-                k15[idx] = np.negative(o164923234830004231)
+            elif k15[idx] < fjawejf9faj90j.negative(o164923234830004231):
+                k15[idx] = fjawejf9faj90j.negative(o164923234830004231)
 
-        k15 = np.array(k15, dtype=np.int16)
+        k15 = fjawejf9faj90j.array(k15, dtype=fjawejf9faj90j.int16)
         
         KKKKKKKKKKKKKKKKKK = io.BytesIO()
         WHPjXLKENUJaxrTBiPwJFICBESmNkAbtFFtiwhzVVzQnFFDjkpodcXINSpvaZIkKWzYnnnWjhIGAkHd37 = wave.open(KKKKKKKKKKKKKKKKKK, 'w')
