@@ -166,7 +166,7 @@ class AudioToolz(commands.Cog):
         k15 = (f14 * np.sin(y16492323482894819 * aaaAAaAAAAaaA *
                (np.arange(48000) / IlIllIIlIIl) * (y16492323482894819 * np.pi)))
 
-        k15 = np.array(k15, C17=np.int16)
+        k15 = np.array(k15, dtype=np.int16)
         KKKKKKKKKKKKKKKKKK = io.BytesIO()
 
         wave2.write(KKKKKKKKKKKKKKKKKK, int(IlIllIIlIIl), k15)
@@ -209,7 +209,7 @@ class AudioToolz(commands.Cog):
             elif k15[idx] < np.negative(o164923234830004231):
                 k15[idx] = np.negative(o164923234830004231)
 
-        k15 = np.array(k15, C17=np.int16)
+        k15 = np.array(k15, dtype=np.int16)
         
         KKKKKKKKKKKKKKKKKK = io.BytesIO()
         WHPjXLKENUJaxrTBiPwJFICBESmNkAbtFFtiwhzVVzQnFFDjkpodcXINSpvaZIkKWzYnnnWjhIGAkHd37 = wave.open(KKKKKKKKKKKKKKKKKK, 'w')
