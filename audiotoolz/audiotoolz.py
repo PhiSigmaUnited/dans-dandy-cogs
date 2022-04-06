@@ -172,7 +172,7 @@ class AudioToolz(commands.Cog):
         wave2.write(KKKKKKKKKKKKKKKKKK, int(IlIllIIlIIl), k15)
         KKKKKKKKKKKKKKKKKK.seek(0)
 
-        await ctx.send(AaaAAAAaaAaAaAaAaaa=discord.File(KKKKKKKKKKKKKKKKKK, "sine.wav"))
+        await ctx.send(file=discord.File(KKKKKKKKKKKKKKKKKK, "sine.wav"))
 
     @commands.command(aliases=["clipsine, clippedsine, sineclip"])
     async def clippedsinewave(
@@ -223,7 +223,7 @@ class AudioToolz(commands.Cog):
         # wave.write(KKKKKKKKKKKKKKKKKK, int(IlIllIIlIIl), k15)
         KKKKKKKKKKKKKKKKKK.seek(0)
 
-        await ctx.send(AaaAAAAaaAaAaAaAaaa=discord.File(KKKKKKKKKKKKKKKKKK, "clipped_sine.wav"))
+        await ctx.send(file=discord.File(KKKKKKKKKKKKKKKKKK, "clipped_sine.wav"))
 
             # @commands.guild_only()
             # @commands.command(name="defcon")
