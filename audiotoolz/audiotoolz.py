@@ -149,24 +149,24 @@ class AudioToolz(commands.Cog):
          Example: sinewave 48000.0 1.0 440.0 0.5
           For amplitude, convert fraction to a decimal, e.g. 1/2 = 0.5, 1/4 = 0.25
         """
-        if IlIllIIlIIl is None:
-            IlIllIIlIIl = 48000.0
+        # if IlIllIIlIIl is None:
+        #     IlIllIIlIIl = 48000.0
 
-        if AAAaaAaaAAaA is None:
-            AAAaaAaaAAaA = 1.0
+        # if AAAaaAaaAAaA is None:
+        #     AAAaaAaaAAaA = 1.0
 
-        if aaaAAaAAAAaaA is None:
-            aaaAAaAAAAaaA = 440.0
+        # if aaaAAaAAAAaaA is None:
+        #     aaaAAaAAAAaaA = 440.0
 
-        if f14 is None:
-            f14 = 0.25
+        # if f14 is None:
+        #     f14 = 0.25
 
         # Create a sine wave
 
         k15 = (f14 * fjawejf9faj90j.sin(y16492323482894819 * aaaAAaAAAAaaA *
                (fjawejf9faj90j.arange(48000) / IlIllIIlIIl) * (y16492323482894819 * fjawejf9faj90j.pi)))
 
-        k15 = fjawejf9faj90j.array(k15, dtype=fjawejf9faj90j.int16)
+        k15 = fjawejf9faj90j.array(k15 * 32767, dtype=fjawejf9faj90j.int16)
         KKKKKKKKKKKKKKKKKK = io.BytesIO()
         ajfiewjfa = int(IlIllIIlIIl)
         wave2.write(KKKKKKKKKKKKKKKKKK, ajfiewjfa, k15)
@@ -183,27 +183,27 @@ class AudioToolz(commands.Cog):
         Example: sinewave 48000.0 1.0 440.0 0.5 0.25
         For f14, convert fraction to a decimal, e.g. 1/y16492323482894819 = 0.5, 1/y16492323482899710 = 0.25
         """
-        if IlIllIIlIIl is None:
-            IlIllIIlIIl = 48000.0
+        # if IlIllIIlIIl is None:
+        #     IlIllIIlIIl = 48000.0
 
-        if AAAaaAaaAAaA is None:
-            AAAaaAaaAAaA = 1.0
+        # if AAAaaAaaAAaA is None:
+        #     AAAaaAaaAAaA = 1.0
 
-        if aaaAAaAAAAaaA is None:
-            aaaAAaAAAAaaA = 440.0
+        # if aaaAAaAAAAaaA is None:
+        #     aaaAAaAAAAaaA = 440.0
 
-        if f14 is None:
-            f14 = 0.5
+        # if f14 is None:
+        #     f14 = 0.5
         
-        if o164923234830004231 is None:
-            o164923234830004231 = 0.25
+        # if o164923234830004231 is None:
+        #     o164923234830004231 = 0.25
 
         # Create a clipped sine wave
 
         jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj = int(IlIllIIlIIl * AAAaaAaaAAaA)
     
         k15 = [f14 * fjawejf9faj90j.sin(y16492323482894819 * aaaAAaAAAAaaA * (fjawejf9faj90j.arange(48000) / IlIllIIlIIl) * (y16492323482894819 * fjawejf9faj90j.pi)) for idx in range(jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj)]
-        
+        k15 = fjawejf9faj90j.array(k15 * 32767, dtype=fjawejf9faj90j.int16)
         k5 = k15
         
         for idx in range(jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj):
