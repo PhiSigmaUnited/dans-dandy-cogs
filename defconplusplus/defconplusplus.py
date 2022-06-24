@@ -96,7 +96,7 @@ class DefconPlusPlus(commands.Cog):
             await self.conf.guild(guild).authority.set(member.display_name)
             await self._post_defcon(ctx, guild, channel)
         else:
-            await ctx.send("Not a valid DEFCON level bruh")
+            await ctx.send("The number, " + str(level) + ", is not a valid DEFCON level bruh")
 
     @commands.guild_only()
     @commands.command(name="defconchan")
