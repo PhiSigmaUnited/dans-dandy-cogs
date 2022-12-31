@@ -9,8 +9,6 @@ class DefconPlusPlus(commands.Cog):
     """Server DEFCON Levels"""
 
     default_global_settings = {
-        # Yes this is weird, but lower defcon == higher threat
-        # NO ITS NOT THIS IS AMERICA USA USA USA USA USA USA USA USA USA USA USA USA USA USA USA USA USA USA USA USA USA
         "max_defcon": 5,
         "min_defcon": 1
     }
