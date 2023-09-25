@@ -40,7 +40,7 @@ class DefconPlusPlus(commands.Cog):
         guild = ctx.message.guild
         # channel = ctx.message.channel
         level = await self.conf.guild(guild).defcon()
-        await ctx.send("The current Summer 2023 DEFCON level is:\n\n**DEFCON __{}__**.".format(level))
+        await ctx.send("The current Fall 2023 DEFCON level is:\n\n**DEFCON __{}__**.".format(level))
 
     @commands.guild_only()
     @commands.command(name="postdefconstatus")
@@ -130,7 +130,7 @@ class DefconPlusPlus(commands.Cog):
         if level == 5:
             color = 0x0080ff
             thumbnail_url = 'https://i.imgur.com/ynitQlf.gif'
-            author = "Summer 2023 Term is at DEFCON LEVEL {}.".format(level)
+            author = "Fall 2023 Term is at DEFCON LEVEL {}.".format(level)
             subtitle = ("No known threats to your GPA or PSU grades "
                         "exist at this time.")
             instructions = ("- Relaxing & Enjoying the peace before the exams is encouraged.\n"
@@ -139,7 +139,7 @@ class DefconPlusPlus(commands.Cog):
         elif level == 4:
             color = 0x00ff00
             thumbnail_url = 'https://i.imgur.com/sRhQekI.gif'
-            author = "Summer 2023 Term is at DEFCON LEVEL {}.".format(level)
+            author = "Fall 2023 Term is at DEFCON LEVEL {}.".format(level)
             subtitle = 'Academic threats have been detected to be near or soon.'
             instructions = ("! Follow Your 'G.N.C.':\n"
                             "-> G - Your PSU Google Calendar.\n"
@@ -148,7 +148,7 @@ class DefconPlusPlus(commands.Cog):
         elif level == 3:
             color = 0xffff00
             thumbnail_url = 'https://i.imgur.com/xY9SkkA.gif'
-            author = "Summer 2023 Term is at DEFCON LEVEL {}.".format(level)
+            author = "Fall 2023 Term is at DEFCON LEVEL {}.".format(level)
             subtitle = 'Academic threats have been detected to be imminent.'
             instructions = ("! Use extreme caution if procrastinating at this time.\n"
                             "! Check your PSU Email,"
@@ -160,7 +160,7 @@ class DefconPlusPlus(commands.Cog):
         elif level == 2:
             color = 0xff0000
             thumbnail_url = 'https://i.imgur.com/cSzezRE.gif'
-            author = "Summer 2023 Term is at DEFCON LEVEL {}.".format(level)
+            author = "Fall 2023 Term is at DEFCON LEVEL {}.".format(level)
             subtitle = 'Prepare for War. Brace For Academic Self-Esteem Impact.'
             instructions = ("!! Immediately start pre-planning"
                             " for upcoming projects & exams.\n"
@@ -171,7 +171,7 @@ class DefconPlusPlus(commands.Cog):
         elif level == 1:
             color = 0xffffff
             thumbnail_url = 'https://i.imgur.com/NVB1AFA.gif'
-            author = "Summer 2023 Term is at DEFCON LEVEL {}.".format(level)
+            author = "Fall 2023 Term is at DEFCON LEVEL {}.".format(level)
             subtitle = 'Finals Week. Let\'s get this fucking bread.'
             instructions = ("!!! Good luck, fellow students.\n"
                             "!!! Remember: If you give it your all...\n"
